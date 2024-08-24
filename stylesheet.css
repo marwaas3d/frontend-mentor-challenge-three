@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bgground:hsl(217, 54%, 11%);
+    --card-bg:hsl(216, 50%, 16%);
+    --white-color:hsl(0, 0%, 100%);
+    --content-color:hsl(213.8deg 55.04% 74.71% / 66%);
+    --cyan:hsl(178, 100%, 50%);
+}
+body{
+    background-color: var(--main-bgground);
+}
+
+.card {
+    background-color: var(--card-bg);
+    margin: 88px auto;
+    width: 290px;
+    height: 482px;
+    border-radius: 10px;
+    box-shadow: 1px 16px 18px 16px #09090929;
+    position: relative;
+}
+
+img {
+    width: 255px;
+    height: 239px;
+    margin: 17px;
+    border-radius: 10px;
+    position: relative;
+}
+.image{
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    background-color: var(--cyan);
+    width: 255px;
+    height: 239px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.image:after{
+    content: url('./images/icon-view.svg');
+    position: absolute;
+    top: 42%;
+    left: 104px;
+}
+
+
+.name{
+    color: var(--white-color);
+    font-family: "Outfit", sans-serif;
+    margin: 0px 17px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.name:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.content {
+    color: var(--content-color);
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 10px 17px;
+}
+
+.left {
+    color: var(--cyan);
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    left: 36px;
+    top: 74%;
+}
+
+.left::before{
+    content: url('./images/icon-ethereum.svg');
+    position: absolute;
+    left: -18px;
+    top: -10%;
+}
+
+.right {
+    color: var(--content-color);
+    font-family: "Outfit", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    position: absolute;
+    right: 20px;
+    top: 74%;
+}
+
+.right::before{
+    content: url('./images/icon-clock.svg');
+    position: absolute;
+    right: 65px;
+    top: -3%;
+    transform: scale(.9);
+}
+.right::after{
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 239%;
+    width: 251px;
+    height: 1px;
+    background-color: var(--content-color);
+    border-radius: 2px;
+}
+
+.creater {
+    color: var(--content-color);
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 79px 62px;
+}
+
+.creater::after {
+    content: url('./images/image-avatar.png');
+    position: absolute;
+    left: -36px;
+    bottom: -28px;
+    transform: scale(0.2);
+    border: 6px solid var(--white-color);
+    border-radius: 50%;
+}
+
+span{
+    color: var(--white-color);
+}
+
+span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+
+
+.attribution{
+    color: var(--white-color);
+    margin: -24px 20px;
+}
+
+.attribution a{
+    color: var(--cyan);
+}
